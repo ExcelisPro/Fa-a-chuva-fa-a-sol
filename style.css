@@ -152,22 +152,20 @@ h1, h2, h3, h4 {
 .author-signature .line { flex: 1; height: 1px; background-color: var(--color-navy); opacity: 0.3; }
 .author-signature .text { font-family: var(--font-heading); font-size: 1.3rem; font-weight: 600; }
 
-/* Botão Amazon */
+/* Botão Amazon com Logo */
 .btn-primary {
-    display: flex; align-items: center; justify-content: center; gap: 0.8rem;
-    background-color: var(--color-navy); color: var(--color-gold);
-    text-decoration: none; padding: 1.2rem 2rem;
-    font-family: var(--font-btn); font-weight: 600; font-size: 1rem;
+    display: flex; align-items: center; justify-content: center;
+    background-color: var(--color-navy);
+    text-decoration: none; padding: 1.1rem 2rem;
     border-radius: 4px; border: 1px solid var(--color-gold);
     transition: all 0.3s ease; width: 100%; max-width: 350px;
 }
-.btn-primary:hover { background-color: #1a2c4a; transform: translateY(-2px); color: #fff;}
+.btn-primary:hover { background-color: #1a2c4a; transform: translateY(-2px); }
 
-.amazon-icon {
-    width: 20px;
-    height: 20px;
-    color: var(--color-gold);
-    flex-shrink: 0;
+.amazon-logo-img {
+    height: 28px;
+    width: auto;
+    object-fit: contain;
 }
 
 .availability {

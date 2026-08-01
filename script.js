@@ -8,7 +8,6 @@ const translations = {
         "desc-p1": "Faça Chuva, Faça Sol nasceu do desejo de revisitar o próprio passado, examinar os acertos e os erros e transformá-los em lições aprendidas.",
         "desc-p2": "São mais de trinta anos de uma história marcada por desafios, na qual a coragem para recomeçar foi encontrada na simplicidade de uma vida dedicada à gestão de projetos e ao equilíbrio com a família. No fundo, é um livro sobre o tipo de liderança que só se aprende depois de perder tudo e voltar a construir.",
         "by-author": "por Eduardo Fernandes de Freitas",
-        "btn-buy": "COMPRAR NA AMAZON",
         "availability": "DISPONÍVEL NO KINDLE • ISBN: 979-8317943936",
         "amazon-url": "https://www.amazon.com.br/Fa%C3%A7a-chuva-fa%C3%A7a-sol-reconstru%C3%A7%C3%A3o-ebook/dp/B0H9X47WZT",
         
@@ -40,7 +39,6 @@ const translations = {
         "desc-p1": "No Matter the Weather was born from a desire to revisit the past, examine successes and failures, and transform them into learned lessons.",
         "desc-p2": "It spans over thirty years of a history marked by challenges, where the courage to start over was found in the simplicity of a life dedicated to project management and family balance. Deep down, it is a book about the kind of leadership one only learns after losing everything and rebuilding.",
         "by-author": "by Eduardo Fernandes de Freitas",
-        "btn-buy": "BUY ON AMAZON",
         "availability": "AVAILABLE ON KINDLE • ISBN: 979-8188799823", 
         "amazon-url": "https://www.amazon.com/dp/B0HBB9Z3JT",
         
