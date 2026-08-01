@@ -10,7 +10,7 @@ const translations = {
         "by-author": "por Eduardo Fernandes de Freitas",
         "btn-buy": "COMPRAR NA AMAZON",
         "availability": "DISPONÍVEL NO KINDLE • ISBN: 979-8317943936",
-        "amazon-url": "https://www.amazon.com.br/dp/B0H9X47WZT",
+        "amazon-url": "https://www.amazon.com.br/Fa%C3%A7a-chuva-fa%C3%A7a-sol-reconstru%C3%A7%C3%A3o-ebook/dp/B0H9X47WZT",
         
         "author-title": "SOBRE O AUTOR",
         "bio-p1": "Eduardo Fernandes de Freitas é Engenheiro Civil, veterano do Exército e profissional de Gerenciamento de Projetos com certificação CAPM®, atuando em Planejamento e Controle na construção industrializada.",
