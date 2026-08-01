@@ -12,7 +12,11 @@ const translations = {
         "btn-sample": "Ler Amostra Grátis",
         "availability": "DISPONÍVEL NO KINDLE • ISBN: 979-8317943936",
         "amazon-url": "https://www.amazon.com.br/Fa%C3%A7a-chuva-fa%C3%A7a-sol-reconstru%C3%A7%C3%A3o-ebook/dp/B0H9X47WZT",
-        "sample-url": "assets/faca_chuva_faca_sol_amostra.pdf",
+        
+        "modal-chapter": "Capítulo 1: O Peso das Fundações",
+        "sample-text-1": "A vida raramente quebra com alarde dramático. Mais frequentemente, ela chega como uma erosão lenta — uma série de pequenas mudanças no solo sob os seus pés até que a estrutura que você passou anos construindo começa a inclinar.",
+        "sample-text-2": "Por muito tempo, acreditei que a engenharia e a gestão de projetos podiam resolver qualquer coisa. Se as variáveis fossem controladas, os cronogramas otimizados e os recursos equilibrados, o sucesso seria apenas uma questão de execução matemática. Mas a vida fora da planilha opera sob leis inteiramente diferentes.",
+        "sample-text-3": "Crescer em Apucarana significava que a estabilidade era um luxo que raramente podíamos nos permitir. As lições daquela época não foram ensinadas em salas de aula; foram forjadas nas manhãs frias, na disciplina silenciosa necessária para continuar avançando quando os recursos eram escassos.",
         
         "author-title": "SOBRE O AUTOR",
         "bio-p1": "Eduardo Fernandes de Freitas é Engenheiro Civil, veterano do Exército e profissional de Gerenciamento de Projetos com certificação CAPM®, atuando em Planejamento e Controle na construção industrializada.",
@@ -46,13 +50,17 @@ const translations = {
         "btn-sample": "Read Free Sample",
         "availability": "AVAILABLE ON KINDLE • ISBN: 979-8188799823", 
         "amazon-url": "https://www.amazon.com/dp/B0HBB9Z3JT",
-        "sample-url": "assets/no_matter_the_weather_sample.pdf",
+        
+        "modal-chapter": "Chapter 1: The Weight of Foundations",
+        "sample-text-1": "Life rarely breaks with dramatic fanfare. More often, it arrives as a slow erosion—a series of small shifts in the ground beneath your feet until the structure you spent years building begins to lean.",
+        "sample-text-2": "For a long time, I believed that engineering and project management could solve anything. If variables were controlled, schedules optimized, and resources balanced, success was merely a matter of mathematical execution. But life outside the spreadsheet operates under entirely different laws.",
+        "sample-text-3": "Growing up in Apucarana, stability was a luxury we rarely afforded. The lessons of that season were not taught in classrooms; they were forged in the cold mornings, in the quiet discipline required to keep moving forward when resources were scarce.",
         
         "author-title": "ABOUT THE AUTHOR",
         "bio-p1": "Eduardo Fernandes de Freitas is a Civil Engineer, Army veteran, and CAPM® certified Project Management professional, currently working in Planning and Control within industrialized construction.",
         "bio-p2": "Born in Apucarana, Paraná, in 1991, he has over seven years of experience managing projects in residential, commercial, and industrial environments, including the first Light Steel Framing project delivered to Petrobras at the REPAR refinery.",
         "bio-p3": "Before entering civil construction, he spent over six years in the industrial sector, developing Lean Manufacturing thinking and working with professionals from various regions of the world, especially the United States and Finland. His education was built alongside his career. He served in the Brazilian Army Infantry and completed technical training in Pulp and Paper. He graduated as a Civil Engineer while working rotating industrial shifts and later specialized in Structures and Foundations. After a childhood marked by hardship and instability, he found his professional footing in engineering.",
-        "bio-p4": "He founded and led Fracta Engenharia for over five years, building more than 15,000 m² and delivering over 20,000 m² of reinforced concrete structural projects for high-end developments nationwide. He led teams of dozens before the pressures of a difficult season forced the business to close. He then specialized in project planning and control, eventually leading the construction of a Planning and Control Department at Brazil's largest industrialized construction company.",
+        "bio-p4": "He founded and led Fracta Engenharia for over five years, building more than 15,000 m² and delivering more than 20,000 m² of reinforced concrete structural projects for high-end developments nationwide. He led teams of dozens before the pressures of a difficult season forced the business to close. He then specialized in project planning and control, eventually leading the construction of a Planning and Control Department at Brazil's largest industrialized construction company.",
         "bio-p5": "He is the creator of the Flow-Based Integrated Planning Model (FIPM™), a governance architecture integrating PMBOK® practices, Last Planner System® production control, and Scrum learning cycles for industrialized construction. He is also a contributor to the book Elevating Construction Project Managers, by Jason Schroeder.",
         "bio-p6": "No Matter the Weather is his first book. It is the honest story of everything mentioned above, including the parts that never make it onto a resume. He lives in Brazil with his wife and daughter.",
         
@@ -95,12 +103,34 @@ function setLanguage(lang) {
         amazonLink.href = translations[lang]["amazon-url"];
     }
 
-    const sampleLink = document.getElementById('sample-link');
-    if (sampleLink && translations[lang]["sample-url"]) {
-        sampleLink.href = translations[lang]["sample-url"];
-    }
-
     document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en-US';
+}
+
+function openSampleModal() {
+    const lang = document.documentElement.lang.startsWith('pt') ? 'pt' : 'en';
+    
+    document.getElementById('modal-title').innerText = translations[lang]["modal-chapter"];
+    
+    const textContainer = document.getElementById('modal-text');
+    textContainer.innerHTML = `
+        <p>${translations[lang]["sample-text-1"]}</p>
+        <p>${translations[lang]["sample-text-2"]}</p>
+        <p>${translations[lang]["sample-text-3"]}</p>
+    `;
+    
+    document.getElementById('modal-amazon-btn').href = translations[lang]["amazon-url"];
+    document.getElementById('sample-modal').style.display = 'flex';
+}
+
+function closeSampleModal() {
+    document.getElementById('sample-modal').style.display = 'none';
+}
+
+window.onclick = function(event) {
+    const modal = document.getElementById('sample-modal');
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {

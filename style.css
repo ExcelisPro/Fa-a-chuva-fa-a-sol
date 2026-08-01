@@ -62,7 +62,6 @@ h1, h2, h3, h4 {
     padding-bottom: 2px;
 }
 
-/* Bandeiras maiores e com visual refinado */
 .flag-icon {
     width: 28px;
     height: auto;
@@ -193,7 +192,7 @@ h1, h2, h3, h4 {
     box-shadow: 0 6px 16px rgba(198, 154, 58, 0.25);
 }
 
-/* Botão Secundário (Ler Amostra Grátis) */
+/* Botão Secundário (Ler Amostra Grátis na Tela) */
 .btn-secondary-sample {
     display: inline-flex;
     align-items: center;
@@ -201,7 +200,7 @@ h1, h2, h3, h4 {
     gap: 0.6rem;
     background-color: transparent;
     color: var(--color-navy);
-    text-decoration: none;
+    cursor: pointer;
     padding: 1rem 2rem;
     font-family: var(--font-btn);
     font-weight: 600;
@@ -304,6 +303,88 @@ h1, h2, h3, h4 {
     font-size: 0.85rem; margin-bottom: 0.3rem; letter-spacing: 1px;
 }
 .feature-item p { color: rgba(255,255,255,0.7); font-size: 0.9rem; line-height: 1.4; }
+
+/* --- ESTILOS DA JANELA MODAL DE AMOSTRA --- */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(14, 27, 47, 0.85);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.modal-content {
+    background-color: var(--color-cream);
+    color: var(--color-text);
+    width: 100%;
+    max-width: 700px;
+    max-height: 85vh;
+    border-radius: 6px;
+    padding: 2.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: 1px solid var(--color-gold);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--color-navy);
+    cursor: pointer;
+    line-height: 1;
+}
+
+.modal-content h2 {
+    font-family: var(--font-heading);
+    color: var(--color-navy);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(198, 154, 58, 0.4);
+    padding-bottom: 0.8rem;
+}
+
+.modal-body-text {
+    overflow-y: auto;
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    text-align: justify;
+    padding-right: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-body-text p {
+    margin-bottom: 1.2rem;
+    text-indent: 1.5em;
+}
+
+.modal-body-text p:first-of-type {
+    text-indent: 0;
+}
+
+.modal-footer {
+    text-align: center;
+    border-top: 1px solid rgba(14, 27, 47, 0.1);
+    padding-top: 1rem;
+}
+
+.modal-footer .btn-primary {
+    margin: 0 auto;
+    max-width: 280px;
+}
 
 /* --- RESPONSIVIDADE --- */
 @media (max-width: 1100px) {
