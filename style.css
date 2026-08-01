@@ -221,6 +221,7 @@ h1, h2, h3, h4 {
     width: 18px;
     height: 18px;
     color: var(--color-gold);
+    flex-shrink: 0;
 }
 .contact-link:hover {
     color: var(--color-gold);
@@ -259,7 +260,6 @@ h1, h2, h3, h4 {
     .lang-switcher button { color: var(--color-navy); }
     .lang-switcher .divider { color: var(--color-navy); }
     
-    /* Bandeiras maiores na versão mobile */
     .flag-icon { 
         width: 26px; 
     }
