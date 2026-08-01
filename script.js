@@ -9,8 +9,10 @@ const translations = {
         "desc-p2": "São mais de trinta anos de uma história marcada por desafios, na qual a coragem para recomeçar foi encontrada na simplicidade de uma vida dedicada à gestão de projetos e ao equilíbrio com a família. No fundo, é um livro sobre o tipo de liderança que só se aprende depois de perder tudo e voltar a construir.",
         "by-author": "por Eduardo Fernandes de Freitas",
         "btn-buy": "COMPRAR NA AMAZON",
+        "btn-sample": "Ler Amostra Grátis",
         "availability": "DISPONÍVEL NO KINDLE • ISBN: 979-8317943936",
         "amazon-url": "https://www.amazon.com.br/Fa%C3%A7a-chuva-fa%C3%A7a-sol-reconstru%C3%A7%C3%A3o-ebook/dp/B0H9X47WZT",
+        "sample-url": "assets/faca_chuva_faca_sol_amostra.pdf",
         
         "author-title": "SOBRE O AUTOR",
         "bio-p1": "Eduardo Fernandes de Freitas é Engenheiro Civil, veterano do Exército e profissional de Gerenciamento de Projetos com certificação CAPM®, atuando em Planejamento e Controle na construção industrializada.",
@@ -41,8 +43,10 @@ const translations = {
         "desc-p2": "It spans over thirty years of a history marked by challenges, where the courage to start over was found in the simplicity of a life dedicated to project management and family balance. Deep down, it is a book about the kind of leadership one only learns after losing everything and rebuilding.",
         "by-author": "by Eduardo Fernandes de Freitas",
         "btn-buy": "BUY ON AMAZON",
+        "btn-sample": "Read Free Sample",
         "availability": "AVAILABLE ON KINDLE • ISBN: 979-8188799823", 
         "amazon-url": "https://www.amazon.com/dp/B0HBB9Z3JT",
+        "sample-url": "assets/no_matter_the_weather_sample.pdf",
         
         "author-title": "ABOUT THE AUTHOR",
         "bio-p1": "Eduardo Fernandes de Freitas is a Civil Engineer, Army veteran, and CAPM® certified Project Management professional, currently working in Planning and Control within industrialized construction.",
@@ -89,6 +93,11 @@ function setLanguage(lang) {
     const amazonLink = document.getElementById('amazon-link');
     if (amazonLink && translations[lang]["amazon-url"]) {
         amazonLink.href = translations[lang]["amazon-url"];
+    }
+
+    const sampleLink = document.getElementById('sample-link');
+    if (sampleLink && translations[lang]["sample-url"]) {
+        sampleLink.href = translations[lang]["sample-url"];
     }
 
     document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en-US';
