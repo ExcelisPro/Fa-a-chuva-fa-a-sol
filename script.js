@@ -10,7 +10,9 @@ const translations = {
         "by-author": "por Eduardo Fernandes de Freitas",
         "btn-buy": "COMPRAR NA AMAZON",
         "availability": "DISPONÍVEL NO KINDLE • ISBN: 979-8317943936",
-        "amazon-url": "https://www.amazon.com.br/Fa%C3%A7a-chuva-fa%C3%A7a-sol-reconstru%C3%A7%C3%A3o-ebook/dp/B0H9X47WZT",
+        
+        /* Link da Loja Brasileira para o livro em PT */
+        "amazon-url": "https://www.amazon.com.br/dp/B0H9X47WZT",
         
         "author-title": "SOBRE O AUTOR",
         "bio-p1": "Eduardo Fernandes de Freitas é Engenheiro Civil, veterano do Exército e profissional de Gerenciamento de Projetos com certificação CAPM®, atuando em Planejamento e Controle na construção industrializada.",
@@ -41,11 +43,10 @@ const translations = {
         "desc-p2": "It spans over thirty years of a history marked by challenges, where the courage to start over was found in the simplicity of a life dedicated to project management and family balance. Deep down, it is a book about the kind of leadership one only learns after losing everything and rebuilding.",
         "by-author": "by Eduardo Fernandes de Freitas",
         "btn-buy": "BUY ON AMAZON",
-        
-        /* ISBN EM INGLÊS ATUALIZADO AQUI */
         "availability": "AVAILABLE ON KINDLE • ISBN: 979-8188799823", 
         
-        "amazon-url": "https://www.amazon.com.br/No-matter-Weather-reconstruction-leadership-ebook/dp/B0HBB9Z3JT",
+        /* Link da Loja Global (.com) para o livro em Inglês */
+        "amazon-url": "https://www.amazon.com/dp/B0HBB9Z3JT",
         
         "author-title": "ABOUT THE AUTHOR",
         "bio-p1": "Eduardo Fernandes de Freitas is a Civil Engineer, Army veteran, and CAPM® certified Project Management professional, currently working in Planning and Control within industrialized construction.",
@@ -69,11 +70,16 @@ const translations = {
 };
 
 function setLanguage(lang) {
+    // 1. Atualiza a classe 'active' nos botões de forma segura
     document.querySelectorAll('.lang-switcher button').forEach(btn => {
         btn.classList.remove('active');
     });
-    if(event) event.currentTarget.classList.add('active');
+    const activeBtn = document.querySelector(`.lang-switcher button[onclick="setLanguage('${lang}')"]`);
+    if (activeBtn) {
+        activeBtn.classList.add('active');
+    }
 
+    // 2. Traduz todos os textos
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
         if (translations[lang] && translations[lang][key]) {
@@ -81,20 +87,23 @@ function setLanguage(lang) {
         }
     });
 
+    // 3. Troca a imagem da capa
     const coverImage = document.getElementById('book-cover-img');
     if (coverImage) {
         coverImage.src = `assets/cover-${lang}.jpg`;
     }
 
+    // 4. Atualiza o link dinâmico da Amazon de forma segura
     const amazonLink = document.getElementById('amazon-link');
     if (amazonLink && translations[lang]["amazon-url"]) {
         amazonLink.href = translations[lang]["amazon-url"];
     }
 
+    // 5. Atualiza a linguagem HTML para SEO
     document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en-US';
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Inicializa o site em Inglês
+    // Agora a função rodará 100% limpa ao iniciar a página
     setLanguage('en');
 });
