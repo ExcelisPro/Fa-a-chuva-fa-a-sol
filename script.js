@@ -10,8 +10,6 @@ const translations = {
         "by-author": "por Eduardo Fernandes de Freitas",
         "btn-buy": "COMPRAR NA AMAZON",
         "availability": "DISPONÍVEL NO KINDLE • ISBN: 979-8317943936",
-        
-        /* Link da Loja Brasileira para o livro em PT */
         "amazon-url": "https://www.amazon.com.br/dp/B0H9X47WZT",
         
         "author-title": "SOBRE O AUTOR",
@@ -44,8 +42,6 @@ const translations = {
         "by-author": "by Eduardo Fernandes de Freitas",
         "btn-buy": "BUY ON AMAZON",
         "availability": "AVAILABLE ON KINDLE • ISBN: 979-8188799823", 
-        
-        /* Link da Loja Global (.com) para o livro em Inglês */
         "amazon-url": "https://www.amazon.com/dp/B0HBB9Z3JT",
         
         "author-title": "ABOUT THE AUTHOR",
@@ -70,7 +66,6 @@ const translations = {
 };
 
 function setLanguage(lang) {
-    // 1. Atualiza a classe 'active' nos botões de forma segura
     document.querySelectorAll('.lang-switcher button').forEach(btn => {
         btn.classList.remove('active');
     });
@@ -79,7 +74,6 @@ function setLanguage(lang) {
         activeBtn.classList.add('active');
     }
 
-    // 2. Traduz todos os textos
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
         if (translations[lang] && translations[lang][key]) {
@@ -87,23 +81,19 @@ function setLanguage(lang) {
         }
     });
 
-    // 3. Troca a imagem da capa
     const coverImage = document.getElementById('book-cover-img');
     if (coverImage) {
         coverImage.src = `assets/cover-${lang}.jpg`;
     }
 
-    // 4. Atualiza o link dinâmico da Amazon de forma segura
     const amazonLink = document.getElementById('amazon-link');
     if (amazonLink && translations[lang]["amazon-url"]) {
         amazonLink.href = translations[lang]["amazon-url"];
     }
 
-    // 5. Atualiza a linguagem HTML para SEO
     document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en-US';
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Agora a função rodará 100% limpa ao iniciar a página
     setLanguage('en');
 });

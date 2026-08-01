@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Site oficial do livro Faça Chuva, Faça Sol, de Eduardo Fernandes de Freitas.">
+    <meta name="description" content="Official website of the book No Matter the Weather, by Eduardo Fernandes de Freitas.">
     <title data-i18n="page-title">No Matter the Weather | Eduardo Fernandes de Freitas</title>
     
     <!-- Google Fonts -->
@@ -16,9 +16,13 @@
 
     <!-- NAVEGAÇÃO BILINGUE FIXA -->
     <nav class="lang-switcher">
-        <button onclick="setLanguage('en')" class="active">🇺🇸 English</button>
+        <button onclick="setLanguage('en')" class="active">
+            <img src="https://flagcdn.com/us.svg" class="flag-icon" alt="US Flag"> English
+        </button>
         <span class="divider">|</span>
-        <button onclick="setLanguage('pt')">🇧🇷 Português</button>
+        <button onclick="setLanguage('pt')">
+            <img src="https://flagcdn.com/br.svg" class="flag-icon" alt="BR Flag"> Português
+        </button>
     </nav>
 
     <!-- TOPO NAVY -->
@@ -37,8 +41,7 @@
             <!-- COLUNA 1: CAPA DO LIVRO -->
             <div class="column-cover">
                 <div class="book-wrapper">
-                    <!-- A capa carrega o inglês por padrão agora -->
-                    <img src="assets/cover-en.jpg" id="book-cover-img" class="book-cover-3d" alt="Capa do livro">
+                    <img src="assets/cover-en.jpg" id="book-cover-img" class="book-cover-3d" alt="Book cover">
                 </div>
             </div>
 
@@ -95,7 +98,7 @@
                     <p data-i18n="bio-p5">He is the creator of the Flow-Based Integrated Planning Model (FIPM™), a governance architecture integrating PMBOK® practices, Last Planner System® production control, and Scrum learning cycles for industrialized construction. He is also a contributor to the book Elevating Construction Project Managers, by Jason Schroeder.</p>
                     <p data-i18n="bio-p6">No Matter the Weather is his first book. It is the honest story of everything mentioned above, including the parts that never make it onto a resume. He lives in Brazil with his wife and daughter.</p>
                     
-                    <!-- BLOCO DE CONTATO ADICIONADO AQUI -->
+                    <!-- BLOCO DE CONTATO -->
                     <div class="author-contact">
                         <h4 data-i18n="contact-title">GET IN TOUCH</h4>
                         <a href="mailto:edengcv@gmail.com" class="contact-link">
@@ -107,8 +110,6 @@
                             +55 42 98406-6238
                         </a>
                     </div>
-                    <!-- FIM DO BLOCO DE CONTATO -->
-
                 </div>
             </div>
 
@@ -118,7 +119,6 @@
     <!-- RODAPÉ FEATURES (NAVY) -->
     <footer class="features-bar">
         <div class="features-grid">
-            <!-- Feature 1 -->
             <div class="feature-item">
                 <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="1.5"><path d="M20 16.2A4.5 4.5 0 0 0 17.5 8h-1.8A7 7 0 1 0 4 14.9"/><path d="M16 14v6"/><path d="M8 14v6"/><path d="M12 16v6"/></svg>
                 <div>
@@ -126,7 +126,6 @@
                     <p data-i18n="feat1-desc">I found strength in cold days and new beginnings.</p>
                 </div>
             </div>
-            <!-- Feature 2 -->
             <div class="feature-item">
                 <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                 <div>
@@ -134,7 +133,6 @@
                     <p data-i18n="feat2-desc">What remains when everything else falls apart.</p>
                 </div>
             </div>
-            <!-- Feature 3 -->
             <div class="feature-item">
                 <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="1.5"><path d="M21 7l-5-5-5 5"/><path d="M16 2v10"/><path d="M22 22l-6-6-6 6-6-6-3 3"/><path d="M4 14l6-6 6 6"/></svg>
                 <div>
@@ -142,7 +140,6 @@
                     <p data-i18n="feat3-desc">What is built on paper must be executed.</p>
                 </div>
             </div>
-            <!-- Feature 4 -->
             <div class="feature-item">
                 <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
                 <div>
