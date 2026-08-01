@@ -34,7 +34,7 @@ const translations = {
         "sample-text-18": "Quando cheguei, ela me olhou do jeito que só uma criança pode olhar para algo novo, com a atenção plena e descomplicada de uma pessoa para quem o mundo ainda tem capacidade de surpreender. Ela não sabia que eu iria embora antes de ter chance de me conhecer. Só sabia que eu estava ali.",
         "sample-text-19": "Fui embora antes de ter memória do que deixei.",
         "sample-text-20": "O divórcio, quando veio, chegou com a rapidez humana que caracteriza o momento em que pessoas que estavam segurando algo juntas finalmente param. O que havia sido uma família de quatro tornou-se, no espaço de decisões que ninguém documentou e ninguém depois explicou completamente, quatro pessoas apontadas em quatro direções diferentes.",
-        "sample-text-21": "Minha mãe foi pelo seu caminho. Com o tempo, conheceria outro homem, um grande homem, o padrasto a quem este livro retorna mais adiante. Meu pai também foi pelo seu caminho, com outra mulher, alguém a quem este livro também retornará, embora não no mesmo tom. Ela era alguém sobre quem não tenho palavras gentis, e não vou inventar nenhuma. Minha irmã foi morar com os avós paternos, numa casa já ocupada por um tio jovem que ainda morava em casa e por outro tio que havia sofrido um AVC e precisava de cuidados. Era uma família que já havia aprendido a abrir espaço para a dificuldade, a absorver o que precisava ser absorvido. Minha irmã cresceria naquela casa, moldada por aquelas pessoas, por aquele arranjo particular de vidas.",
+        "sample-text-21": "Minha mãe foi pelo seu caminho. Conheceria outro homem, um grande homem, o padrasto a quem este livro retorna mais adiante. Meu pai também foi pelo seu caminho, com outra mulher, alguém a quem este livro também retornará, embora não no mesmo tom. Ela era alguém sobre quem não tenho palavras gentis, e não vou inventar nenhuma. Minha irmã foi morar com os avós paternos, numa casa já ocupada por um tio jovem que ainda morava em casa e por outro tio que havia sofrido um AVC e precisava de cuidados. Era uma família que já havia aprendido a abrir espaço para a dificuldade, a absorver o que precisava ser absorvido. Minha irmã cresceria naquela casa, moldada por aquelas pessoas, por aquele arranjo particular de vidas.",
         "sample-text-22": "Eu fui para um lugar completamente diferente.",
         "sample-text-23": "Fui morar com meu tio e minha tia paternos, de volta a Apucarana, a cidade em que havia nascido e deixado como bebê sem nunca ter sabido. Dizer que eram pessoas boas é correto, mas insuficiente: não captura a qualidade específica da bondade deles, que não era a bondade dramática e autoconsciente de pessoas que querem ser reconhecidas pelo sacrifício, mas a bondade mais silenciosa e mais durável de pessoas que simplesmente se comportam bem porque é isso que são. Tinham três filhos próprios. A casa deles era o tipo de casa que se anuncia no momento em que você passa pela porta: o cheiro de algo cozinhando, o som de crianças negociando as pequenas disputas da infância, uma televisão ligada em algum lugar, um senso de caos organizado que é na verdade apenas a vida sendo vivida em volume total.",
         "sample-text-24": "Abriram espaço para mais um sem fazer disso uma performance. Não houve anúncio formal, nenhum rearranjo de móveis acompanhado de suspiros. Havia simplesmente uma criança que precisava de um lugar, e pessoas que tinham um lugar e estavam dispostas a compartilhá-lo. Meus primos, três deles, os companheiros embutidos de uma infância que de outra forma poderia ter sido solitária, me receberam com a aceitação descomplicada de crianças que ainda não aprenderam a desconfiar de recém-chegados. Eu estava ali, era um deles, isso era suficiente.",
@@ -140,6 +140,12 @@ const translations = {
     }
 };
 
+function selectLanguage(lang) {
+    const gateway = document.getElementById('language-gateway');
+    gateway.classList.add('fade-out');
+    setLanguage(lang);
+}
+
 function setLanguage(lang) {
     document.querySelectorAll('.lang-switcher button').forEach(btn => {
         btn.classList.remove('active');
@@ -198,7 +204,3 @@ window.onclick = function(event) {
         modal.style.display = 'none';
     }
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-    setLanguage('en');
-});

@@ -25,7 +25,27 @@
 </head>
 <body>
 
-    <!-- NAVEGAÇÃO BILINGUE FIXA -->
+    <!-- TELA DE BOAS-VINDAS / ESCOLHA DE IDIOMA (SPLASH SCREEN) -->
+    <div id="language-gateway" class="gateway-overlay">
+        <div class="gateway-card">
+            <h3>No Matter the Weather</h3>
+            <p>Choose your language / Escolha seu idioma</p>
+            
+            <div class="gateway-flags">
+                <button onclick="selectLanguage('en')" class="gateway-btn">
+                    <img src="https://flagcdn.com/us.svg" alt="US Flag" class="gateway-flag-img">
+                    <span>English</span>
+                </button>
+                
+                <button onclick="selectLanguage('pt')" class="gateway-btn">
+                    <img src="https://flagcdn.com/br.svg" alt="BR Flag" class="gateway-flag-img">
+                    <span>Português</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVEGAÇÃO BILINGUE FIXA (CONTINUA NO TOPO DO SITE) -->
     <nav class="lang-switcher">
         <button onclick="setLanguage('en')" class="active">
             <img src="https://flagcdn.com/us.svg" class="flag-icon" alt="US Flag"> English
