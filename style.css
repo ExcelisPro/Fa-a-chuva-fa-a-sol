@@ -164,8 +164,8 @@ h1, h2, h3, h4 {
 .btn-primary:hover { background-color: #1a2c4a; transform: translateY(-2px); color: #fff;}
 
 .amazon-icon {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
     color: var(--color-gold);
     flex-shrink: 0;
 }
