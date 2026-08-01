@@ -29,20 +29,23 @@ h1, h2, h3, h4 {
     color: var(--color-navy);
 }
 
-/* --- TELA DE BOAS-VINDAS / ESCOLHA DE IDIOMA (GATEWAY) --- */
+/* --- TELA DE SELEÇÃO DE IDIOMA (ESTILO DA IMAGEM) --- */
 .gateway-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: var(--color-navy);
+    /* Fundo com a imagem dividida (chuva/sol) com escurecimento por cima */
+    background: linear-gradient(rgba(14, 27, 47, 0.75), rgba(14, 27, 47, 0.85)), url('assets/gateway-bg.jpg');
+    background-size: cover;
+    background-position: center;
     z-index: 9999;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1.5rem;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
 }
 
 .gateway-overlay.fade-out {
@@ -50,69 +53,87 @@ h1, h2, h3, h4 {
     visibility: hidden;
 }
 
-.gateway-card {
-    background-color: var(--color-cream);
-    border: 1px solid var(--color-gold);
-    border-radius: 8px;
-    padding: 3rem 2.5rem;
+.gateway-container {
     text-align: center;
-    max-width: 480px;
+    max-width: 900px;
     width: 100%;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
 }
 
-.gateway-card h3 {
-    font-size: 2.2rem;
-    color: var(--color-navy);
+.gateway-title {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 1px;
     margin-bottom: 0.5rem;
 }
 
-.gateway-card p {
-    font-family: var(--font-btn);
-    font-size: 0.95rem;
-    color: #555;
-    margin-bottom: 2rem;
-    letter-spacing: 0.5px;
+.gateway-ornament {
+    width: 100px;
+    height: 2px;
+    background-color: var(--color-gold);
+    margin: 0.8rem auto;
 }
 
-.gateway-flags {
+.gateway-subtitle {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    color: var(--color-gold);
+    font-style: italic;
+    margin-bottom: 3.5rem;
+}
+
+.gateway-cards-grid {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 3rem;
 }
 
-.gateway-btn {
-    background: white;
-    border: 2px solid rgba(14, 27, 47, 0.15);
-    border-radius: 6px;
-    padding: 1rem 1.5rem;
+.gateway-card {
+    background: rgba(14, 27, 47, 0.85);
+    border: 1px solid var(--color-gold);
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.8rem;
-    transition: all 0.3s ease;
-    width: 130px;
+    gap: 1.8rem;
+    width: 280px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    transition: all 0.4s ease;
 }
 
-.gateway-btn span {
-    font-family: var(--font-btn);
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: var(--color-navy);
+.gateway-flag-wrapper {
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
 .gateway-flag-img {
-    width: 48px;
+    width: 100%;
     height: auto;
-    border-radius: 4px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    display: block;
+    transition: transform 0.5s ease;
 }
 
-.gateway-btn:hover {
-    border-color: var(--color-gold);
-    transform: translateY(-4px);
-    box-shadow: 0 6px 15px rgba(198, 154, 58, 0.25);
+.gateway-card-text {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+.gateway-card:hover {
+    transform: translateY(-8px);
+    border-color: #dfb24c;
+    box-shadow: 0 20px 45px rgba(198, 154, 58, 0.3);
+    background: rgba(14, 27, 47, 0.95);
+}
+
+.gateway-card:hover .gateway-flag-img {
+    transform: scale(1.05);
 }
 
 /* --- NAV IDIOMA COM BANDEIRAS MAIORES --- */
@@ -488,6 +509,10 @@ h1, h2, h3, h4 {
     .author-bio { text-align: left; }
     .features-grid { grid-template-columns: 1fr; }
     
+    .gateway-cards-grid { flex-direction: column; align-items: center; gap: 1.5rem; }
+    .gateway-card { width: 100%; max-width: 240px; padding: 1.5rem; }
+    .gateway-title { font-size: 2.5rem; }
+
     .lang-switcher button { color: var(--color-navy); }
     .lang-switcher .divider { color: var(--color-navy); }
     

@@ -25,27 +25,34 @@
 </head>
 <body>
 
-    <!-- TELA DE BOAS-VINDAS / ESCOLHA DE IDIOMA (SPLASH SCREEN) -->
+    <!-- TELA DE ESCOLHA DE IDIOMA (ESTILO DA SUA IMAGEM) -->
     <div id="language-gateway" class="gateway-overlay">
-        <div class="gateway-card">
-            <h3>No Matter the Weather</h3>
-            <p>Choose your language / Escolha seu idioma</p>
+        <div class="gateway-container">
+            <h1 class="gateway-title">Choose your language</h1>
+            <div class="gateway-ornament"></div>
+            <p class="gateway-subtitle">Escolha seu idioma</p>
             
-            <div class="gateway-flags">
-                <button onclick="selectLanguage('en')" class="gateway-btn">
-                    <img src="https://flagcdn.com/us.svg" alt="US Flag" class="gateway-flag-img">
-                    <span>English</span>
+            <div class="gateway-cards-grid">
+                <!-- CARD INGLÊS -->
+                <button onclick="selectLanguage('en')" class="gateway-card">
+                    <div class="gateway-flag-wrapper">
+                        <img src="https://flagcdn.com/w640/us.png" alt="US Flag" class="gateway-flag-img">
+                    </div>
+                    <span class="gateway-card-text">English</span>
                 </button>
                 
-                <button onclick="selectLanguage('pt')" class="gateway-btn">
-                    <img src="https://flagcdn.com/br.svg" alt="BR Flag" class="gateway-flag-img">
-                    <span>Português</span>
+                <!-- CARD PORTUGUÊS -->
+                <button onclick="selectLanguage('pt')" class="gateway-card">
+                    <div class="gateway-flag-wrapper">
+                        <img src="https://flagcdn.com/w640/br.png" alt="BR Flag" class="gateway-flag-img">
+                    </div>
+                    <span class="gateway-card-text">Português</span>
                 </button>
             </div>
         </div>
     </div>
 
-    <!-- NAVEGAÇÃO BILINGUE FIXA (CONTINUA NO TOPO DO SITE) -->
+    <!-- NAVEGAÇÃO BILINGUE FIXA -->
     <nav class="lang-switcher">
         <button onclick="setLanguage('en')" class="active">
             <img src="https://flagcdn.com/us.svg" class="flag-icon" alt="US Flag"> English
@@ -59,7 +66,6 @@
     <!-- TOPO NAVY -->
     <header class="top-bar">
         <h4 data-i18n="top-header">MEMOIRS</h4>
-        <!-- Ornamento SVG -->
         <svg class="ornament" viewBox="0 0 100 20" fill="var(--color-gold)">
             <path d="M50 10 L45 5 L40 10 L45 15 Z M20 10 L40 10 M60 10 L80 10 M50 10 L55 5 L60 10 L55 15 Z"></path>
         </svg>
