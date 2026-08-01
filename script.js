@@ -20,6 +20,8 @@ const translations = {
         "bio-p5": "É o criador do Modelo de Planejamento Integrado Baseado em Fluxo (FIPM™), uma arquitetura de governança que integra as práticas do PMBOK®, o controle de produção do Last Planner System® e os ciclos de aprendizagem do Scrum para a construção industrializada. Também é um dos contribuidores do livro Elevating Construction Project Managers, de Jason Schroeder.",
         "bio-p6": "Faça Chuva, Faça Sol é o seu primeiro livro. É a história de tudo o que está acima, contada com honestidade, incluindo as partes que não aparecem em um currículo. Ele vive no Brasil com sua esposa e filha.",
         
+        "contact-title": "CONTATO",
+        
         "feat1-title": "NASCIDO NA TEMPESTADE",
         "feat1-desc": "Encontrei força em dias frios e em recomeços.",
         "feat2-title": "FAMÍLIA É ALICERCE",
@@ -39,7 +41,10 @@ const translations = {
         "desc-p2": "It spans over thirty years of a history marked by challenges, where the courage to start over was found in the simplicity of a life dedicated to project management and family balance. Deep down, it is a book about the kind of leadership one only learns after losing everything and rebuilding.",
         "by-author": "by Eduardo Fernandes de Freitas",
         "btn-buy": "BUY ON AMAZON",
-        "availability": "AVAILABLE ON KINDLE • ISBN: 979-8317943936",
+        
+        /* ISBN EM INGLÊS ATUALIZADO AQUI */
+        "availability": "AVAILABLE ON KINDLE • ISBN: 979-8188799823", 
+        
         "amazon-url": "https://www.amazon.com.br/No-matter-Weather-reconstruction-leadership-ebook/dp/B0HBB9Z3JT",
         
         "author-title": "ABOUT THE AUTHOR",
@@ -49,6 +54,8 @@ const translations = {
         "bio-p4": "He founded and led Fracta Engenharia for over five years, building more than 15,000 m² and delivering over 20,000 m² of reinforced concrete structural projects for high-end developments nationwide. He led teams of dozens before the pressures of a difficult season forced the business to close. He then specialized in project planning and control, eventually leading the construction of a Planning and Control Department at Brazil's largest industrialized construction company.",
         "bio-p5": "He is the creator of the Flow-Based Integrated Planning Model (FIPM™), a governance architecture integrating PMBOK® practices, Last Planner System® production control, and Scrum learning cycles for industrialized construction. He is also a contributor to the book Elevating Construction Project Managers, by Jason Schroeder.",
         "bio-p6": "No Matter the Weather is his first book. It is the honest story of everything mentioned above, including the parts that never make it onto a resume. He lives in Brazil with his wife and daughter.",
+        
+        "contact-title": "GET IN TOUCH",
         
         "feat1-title": "BORN IN THE STORM",
         "feat1-desc": "I found strength in cold days and new beginnings.",
