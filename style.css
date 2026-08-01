@@ -91,7 +91,7 @@ h1, h2, h3, h4 {
     align-items: flex-start;
 }
 
-/* --- COLUNA 1: CAPA (LIMPA, SEM SOMBRAS) --- */
+/* --- COLUNA 1: CAPA --- */
 .book-wrapper {
     display: flex;
     justify-content: center;
@@ -185,6 +185,40 @@ h1, h2, h3, h4 {
 }
 .author-bio p { margin-bottom: 1rem; }
 .clear-float { clear: both; }
+
+/* --- CONTATO DO AUTOR --- */
+.author-contact {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(14, 27, 47, 0.1);
+}
+.author-contact h4 {
+    font-family: var(--font-btn);
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 1rem;
+    color: var(--color-gold);
+}
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--color-navy);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+.contact-link svg {
+    width: 18px;
+    height: 18px;
+    color: var(--color-gold);
+}
+.contact-link:hover {
+    color: var(--color-gold);
+    transform: translateX(4px);
+}
 
 /* --- RODAPÉ DE FEATURES --- */
 .features-bar { background-color: var(--color-navy); padding: 3rem 2rem; color: #fff; }
