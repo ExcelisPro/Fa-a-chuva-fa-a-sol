@@ -88,5 +88,6 @@ function setLanguage(lang) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    setLanguage('pt');
+    // Inicializa o site em Inglês
+    setLanguage('en');
 });

@@ -1,6 +1,6 @@
 /* --- VARIÁVEIS & RESET --- */
 :root {
-    --color-cream: #F7F3EB; /* ESTA É A COR DE FUNDO EXATA */
+    --color-cream: #F7F3EB;
     --color-navy: #0E1B2F;
     --color-gold: #C69A3A;
     --color-text: #2A2A2A;
@@ -39,14 +39,27 @@ h1, h2, h3, h4 {
     align-items: center;
     gap: 0.5rem;
 }
-.lang-switcher .divider { color: rgba(255,255,255,0.3); font-size: 0.9rem; }
-.lang-switcher button {
-    background: none; border: none; cursor: pointer;
-    font-family: var(--font-btn); color: rgba(255,255,255,0.7);
-    font-size: 0.8rem; transition: color 0.3s;
+.lang-switcher .divider { 
+    color: rgba(255,255,255,0.3); 
+    font-size: 0.9rem; 
 }
-.lang-switcher button strong { color: var(--color-gold); }
-.lang-switcher button.active { color: white; font-weight: 600; border-bottom: 1px solid var(--color-gold); }
+.lang-switcher button {
+    background: none; 
+    border: none; 
+    cursor: pointer;
+    font-family: var(--font-btn); 
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem; 
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+.lang-switcher button.active { 
+    color: white; 
+    font-weight: 600; 
+    border-bottom: 1px solid var(--color-gold); 
+}
 
 /* --- TOPO --- */
 .top-bar {
@@ -88,11 +101,9 @@ h1, h2, h3, h4 {
 .book-cover-3d {
     width: 100%;
     max-width: 380px;
-    /* Removemos qualquer sombra e borda para fundir com o fundo */
     box-shadow: none;
     border: none;
     border-radius: 0;
-    /* Mantém apenas a animação de flutuação */
     transition: transform 0.6s ease;
     animation: float 6s ease-in-out infinite;
 }
