@@ -29,14 +29,13 @@ h1, h2, h3, h4 {
     color: var(--color-navy);
 }
 
-/* --- TELA DE SELEÇÃO DE IDIOMA (ESTILO DA IMAGEM) --- */
+/* --- TELA DE SELEÇÃO DE IDIOMA --- */
 .gateway-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    /* Fundo com a imagem dividida (chuva/sol) com escurecimento por cima */
     background: linear-gradient(rgba(14, 27, 47, 0.75), rgba(14, 27, 47, 0.85)), url('assets/gateway-bg.jpg');
     background-size: cover;
     background-position: center;
@@ -271,7 +270,6 @@ h1, h2, h3, h4 {
     max-width: 350px;
 }
 
-/* Botão Principal (Comprar na Amazon) */
 .btn-primary {
     display: inline-flex;
     align-items: center;
@@ -299,7 +297,6 @@ h1, h2, h3, h4 {
     box-shadow: 0 6px 16px rgba(198, 154, 58, 0.25);
 }
 
-/* Botão Secundário (Ler Amostra Grátis na Tela) */
 .btn-secondary-sample {
     display: inline-flex;
     align-items: center;
@@ -362,7 +359,7 @@ h1, h2, h3, h4 {
 .author-bio p { margin-bottom: 1rem; }
 .clear-float { clear: both; }
 
-/* --- CONTATO DO AUTOR --- */
+/* --- CONTATO E AVALIAÇÕES --- */
 .author-contact {
     margin-top: 2rem;
     padding-top: 1.5rem;
@@ -387,15 +384,42 @@ h1, h2, h3, h4 {
     transition: color 0.3s ease, transform 0.2s ease;
 }
 .contact-link svg {
-    width: 18px;
-    height: 18px;
-    color: var(--color-gold);
-    flex-shrink: 0;
+    width: 18px; height: 18px; color: var(--color-gold); flex-shrink: 0;
 }
-.contact-link:hover {
-    color: var(--color-gold);
-    transform: translateX(4px);
+.contact-link:hover { color: var(--color-gold); transform: translateX(4px); }
+
+/* Estilos do Formulário de Avaliações */
+.reviews-section {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(14, 27, 47, 0.1);
 }
+.reviews-header {
+    display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.3rem;
+}
+.reviews-header svg { width: 18px; height: 18px; }
+.reviews-header h3 { font-family: var(--font-btn); font-size: 0.95rem; letter-spacing: 1px; }
+.reviews-subtitle { font-size: 0.85rem; color: #555; margin-bottom: 1rem; }
+
+.review-form {
+    display: flex; flex-direction: column; gap: 0.9rem;
+    background: rgba(14, 27, 47, 0.02); padding: 1.2rem;
+    border-radius: 4px; border: 1px solid rgba(14, 27, 47, 0.08);
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+.form-group { display: flex; flex-direction: column; gap: 0.3rem; }
+.form-group label { font-family: var(--font-btn); font-size: 0.75rem; font-weight: 600; color: var(--color-navy); }
+.form-group input, .form-group textarea {
+    font-family: var(--font-body); font-size: 0.9rem; padding: 0.6rem;
+    border: 1px solid rgba(14, 27, 47, 0.2); border-radius: 4px; background: #fff;
+}
+.form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--color-gold); }
+
+.star-rating { display: flex; flex-direction: row-reverse; justify-content: flex-end; gap: 0.2rem; }
+.star-rating input { display: none; }
+.star-rating label { font-size: 1.5rem; color: #ddd; cursor: pointer; transition: color 0.2s; }
+.star-rating input:checked ~ label, .star-rating label:hover, .star-rating label:hover ~ label { color: var(--color-gold); }
+.review-submit { width: 100%; padding: 0.8rem; font-size: 0.85rem; }
 
 /* --- RODAPÉ DE FEATURES --- */
 .features-bar { background-color: var(--color-navy); padding: 3rem 2rem; color: #fff; }
@@ -411,87 +435,35 @@ h1, h2, h3, h4 {
 }
 .feature-item p { color: rgba(255,255,255,0.7); font-size: 0.9rem; line-height: 1.4; }
 
-/* --- ESTILOS DA JANELA MODAL DE AMOSTRA --- */
+/* --- JANELA MODAL DE AMOSTRA --- */
 .modal-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(14, 27, 47, 0.85);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
+    display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(14, 27, 47, 0.85); z-index: 1000;
+    justify-content: center; align-items: center; padding: 1rem;
 }
-
 .modal-content {
-    background-color: var(--color-cream);
-    color: var(--color-text);
-    width: 100%;
-    max-width: 700px;
-    max-height: 85vh;
-    border-radius: 6px;
-    padding: 2.5rem;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    border: 1px solid var(--color-gold);
+    background-color: var(--color-cream); color: var(--color-text);
+    width: 100%; max-width: 700px; max-height: 85vh; border-radius: 6px;
+    padding: 2.5rem; position: relative; display: flex; flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3); border: 1px solid var(--color-gold);
 }
-
 .modal-close {
-    position: absolute;
-    top: 1rem;
-    right: 1.5rem;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: var(--color-navy);
-    cursor: pointer;
-    line-height: 1;
+    position: absolute; top: 1rem; right: 1.5rem; background: none; border: none;
+    font-size: 2rem; color: var(--color-navy); cursor: pointer; line-height: 1;
 }
-
 .modal-content h2 {
-    font-family: var(--font-heading);
-    color: var(--color-navy);
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    text-align: center;
-    border-bottom: 1px solid rgba(198, 154, 58, 0.4);
+    font-family: var(--font-heading); color: var(--color-navy); font-size: 1.8rem;
+    margin-bottom: 1.5rem; text-align: center; border-bottom: 1px solid rgba(198, 154, 58, 0.4);
     padding-bottom: 0.8rem;
 }
-
 .modal-body-text {
-    overflow-y: auto;
-    font-family: var(--font-body);
-    font-size: 1.05rem;
-    line-height: 1.7;
-    text-align: justify;
-    padding-right: 0.5rem;
-    margin-bottom: 1.5rem;
+    overflow-y: auto; font-family: var(--font-body); font-size: 1.05rem;
+    line-height: 1.7; text-align: justify; padding-right: 0.5rem; margin-bottom: 1.5rem;
 }
-
-.modal-body-text p {
-    margin-bottom: 1.2rem;
-    text-indent: 1.5em;
-}
-
-.modal-body-text p:first-of-type {
-    text-indent: 0;
-}
-
-.modal-footer {
-    text-align: center;
-    border-top: 1px solid rgba(14, 27, 47, 0.1);
-    padding-top: 1rem;
-}
-
-.modal-footer .btn-primary {
-    margin: 0 auto;
-    max-width: 280px;
-}
+.modal-body-text p { margin-bottom: 1.2rem; text-indent: 1.5em; }
+.modal-body-text p:first-of-type { text-indent: 0; }
+.modal-footer { text-align: center; border-top: 1px solid rgba(14, 27, 47, 0.1); padding-top: 1rem; }
+.modal-footer .btn-primary { margin: 0 auto; max-width: 280px; }
 
 /* --- RESPONSIVIDADE --- */
 @media (max-width: 1100px) {
@@ -508,15 +480,11 @@ h1, h2, h3, h4 {
     .author-photo { float: none; margin: 0 auto 1.5rem auto; display: block; }
     .author-bio { text-align: left; }
     .features-grid { grid-template-columns: 1fr; }
-    
     .gateway-cards-grid { flex-direction: column; align-items: center; gap: 1.5rem; }
     .gateway-card { width: 100%; max-width: 240px; padding: 1.5rem; }
     .gateway-title { font-size: 2.5rem; }
-
+    .form-row { grid-template-columns: 1fr; }
     .lang-switcher button { color: var(--color-navy); }
     .lang-switcher .divider { color: var(--color-navy); }
-    
-    .flag-icon { 
-        width: 32px; 
-    }
+    .flag-icon { width: 32px; }
 }

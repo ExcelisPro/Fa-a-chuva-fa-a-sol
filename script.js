@@ -1,3 +1,9 @@
+// --- CONFIGURAÇÃO DO SUPABASE ---
+const SUPABASE_URL = 'SUA_URL_DO_SUPABASE_AQUI';       // Ex: https://xyz.supabase.co
+const SUPABASE_ANON_KEY = 'SUA_CHAVE_ANON_PUBLIC_AQUI'; // Chave pública anônima
+
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
 const translations = {
     pt: {
         "page-title": "Faça Chuva, Faça Sol | Eduardo Fernandes de Freitas",
@@ -55,10 +61,18 @@ const translations = {
         "bio-p2": "Nascido em Apucarana, Paraná, em 1991, possui mais de sete anos de experiência em gestão de projetos em ambientes residenciais, comerciais e industriais, incluindo o primeiro projeto em Light Steel Framing entregue para a Petrobras, na refinaria REPAR.",
         "bio-p3": "Antes da construção civil, passou mais de seis anos na indústria, onde desenvolveu o pensamento Lean Manufacturing e teve a oportunidade de atuar com profissionais de várias regiões do mundo, especialmente Estados Unidos e Finlândia. Sua formação foi construída em paralelo ao trabalho. Serviu o Exército Brasileiro na arma de Infantaria e concluiu uma formação técnica em Celulose e Papel. Formou-se Engenheiro Civil enquanto trabalhava em turnos industriais rotativos e, mais tarde, especializou-se em Estruturas e Fundações. Depois de uma infância marcada por dificuldades e instabilidade, encontrou na engenharia o caminho para se firmar profissionalmente.",
         "bio-p4": "Fundou e liderou a Fracta Engenharia por mais de cinco anos, onde construiu mais de 15.000 m² e entregou mais de 20.000 m² de projetos estruturais em concreto armado para obras de alto padrão em todo o território nacional, liderando equipes de dezenas de pessoas, antes que as pressões de uma temporada difícil levassem o negócio ao encerramento. Especializou-se em planejamento e controle de projetos e liderou a construção de um Departamento de Planejamento e Controle de Obras na maior empresa de construção industrializada do Brasil.",
-        "bio-p5": "É o criador do Modelo de Planejamento Integrado Baseado em Fluxo (FIPM™), uma arquitetura de governança que integra as práticas do PMBOK®, o controle de produção do Last Planner System® e os ciclos de aprendizagem do Scrum para a construção industrializada. Também é um dos contribuidores do livro Elevating Construction Project Managers, de Jason Schroeder.",
+        "bio-p5": "É o criador do Modelo de Planejamento Integrado Baseado em Fluxo (FIPM™), uma arquitetura de governança que integra as práticas do PMBOK®, o controle de produção do Last Planner System® e os ciclos de aprendizagem do Scrum para a construção industrializada. J'ai aussi contribué au livre Elevating Construction Project Managers, de Jason Schroeder.",
         "bio-p6": "Faça Chuva, Faça Sol é o seu primeiro livro. É a história de tudo o que está acima, contada com honestidade, incluindo as partes que não aparecem em um currículo. Ele vive no Brasil com sua esposa e filha.",
         
         "contact-title": "CONTATO",
+        "reviews-title": "AVALIAÇÕES DOS LEITORES",
+        "reviews-subtitle": "Você já leu o livro? Deixe sua avaliação abaixo.",
+        "form-name": "Nome (Opcional)",
+        "form-country": "País de Residência *",
+        "form-rating": "Avaliação *",
+        "form-comment": "Seu Comentário / Avaliação *",
+        "form-submit": "ENVIAR AVALIAÇÃO",
+        "form-success": "Obrigado! Sua avaliação foi enviada com sucesso.",
         
         "feat1-title": "NASCIDO NA TEMPESTADE",
         "feat1-desc": "Encontrei força em dias frios e em recomeços.",
@@ -128,6 +142,14 @@ const translations = {
         "bio-p6": "No Matter the Weather is his first book. It is the honest story of everything mentioned above, including the parts that never make it onto a resume. He lives in Brazil with his wife and daughter.",
         
         "contact-title": "GET IN TOUCH",
+        "reviews-title": "READER REVIEWS",
+        "reviews-subtitle": "Have you read the book? Leave your review below.",
+        "form-name": "Name (Optional)",
+        "form-country": "Country of Residence *",
+        "form-rating": "Rating *",
+        "form-comment": "Your Review / Comment *",
+        "form-submit": "SUBMIT REVIEW",
+        "form-success": "Thank you! Your review has been submitted successfully.",
         
         "feat1-title": "BORN IN THE STORM",
         "feat1-desc": "I found strength in cold days and new beginnings.",
@@ -140,9 +162,42 @@ const translations = {
     }
 };
 
+// --- CONFIGURAÇÃO DO SUPABASE ---
+const SUPABASE_URL = 'SUA_URL_DO_SUPABASE_AQUI';       // Substitua pela sua URL do Supabase
+const SUPABASE_ANON_KEY = 'SUA_CHAVE_ANON_PUBLIC_AQUI'; // Substitua pela sua chave anon/public
+
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+// Detecção automática por IP do país
+async function detectUserCountryAndSetLanguage() {
+    if (localStorage.getItem('userSelectedLang')) {
+        const savedLang = localStorage.getItem('userSelectedLang');
+        document.getElementById('language-gateway').style.display = 'none';
+        setLanguage(savedLang);
+        return;
+    }
+
+    try {
+        const response = await fetch('https://ipapi.co/json/');
+        const data = await response.json();
+        
+        if (data.country_code === 'BR') {
+            selectLanguage('pt');
+        } else {
+            selectLanguage('en');
+        }
+    } catch (error) {
+        console.log("Detecção de IP indisponível. Mantendo a tela de seleção.");
+    }
+}
+
 function selectLanguage(lang) {
+    localStorage.setItem('userSelectedLang', lang);
     const gateway = document.getElementById('language-gateway');
-    gateway.classList.add('fade-out');
+    if (gateway) {
+        gateway.classList.add('fade-out');
+        setTimeout(() => gateway.style.display = 'none', 600);
+    }
     setLanguage(lang);
 }
 
@@ -204,3 +259,46 @@ window.onclick = function(event) {
         modal.style.display = 'none';
     }
 }
+
+// Inicialização unificada ao carregar a página
+document.addEventListener('DOMContentLoaded', () => {
+    detectUserCountryAndSetLanguage();
+
+    // Lógica de envio do formulário de avaliações para o Supabase
+    const form = document.getElementById('review-form');
+    if (form) {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('reader-name').value.trim();
+            const country = document.getElementById('reader-country').value.trim();
+            const ratingInput = document.querySelector('input[name="rating"]:checked');
+            const comment = document.getElementById('reader-comment').value.trim();
+
+            if (!ratingInput) return;
+
+            const { error } = await supabaseClient
+                .from('book_reviews')
+                .insert([
+                    { 
+                        name: name || 'Anonymous', 
+                        country: country, 
+                        rating: parseInt(ratingInput.value), 
+                        comment: comment 
+                    }
+                ]);
+
+            if (error) {
+                console.error('Erro ao enviar avaliação:', error);
+                alert('Could not submit your review. Please try again.');
+            } else {
+                form.reset();
+                const successMsg = document.getElementById('form-success-msg');
+                if (successMsg) successMsg.style.display = 'block';
+                setTimeout(() => {
+                    if (successMsg) successMsg.style.display = 'none';
+                }, 5000);
+            }
+        });
+    }
+});
