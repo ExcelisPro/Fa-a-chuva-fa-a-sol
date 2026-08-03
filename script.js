@@ -148,40 +148,25 @@ const translations = {
     }
 };
 
-// --- CONFIGURAÇÃO DO SUPABASE (COM AS SUAS CREDENCIAIS REAIS) ---
+// --- CONFIGURAÇÃO DO SUPABASE ---
 const SUPABASE_URL = 'https://vwbjjtxwbqmypwlhfebb.supabase.co';
 const SUPABASE_ANON_KEY = 'sb_publishable_q9W05l7cGPMikmenaOxPFA_WGRq-RwB';
 
 const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-// Detecção automática por IP do país
-async function detectUserCountryAndSetLanguage() {
-    if (localStorage.getItem('userSelectedLang')) {
-        const savedLang = localStorage.getItem('userSelectedLang');
-        const gateway = document.getElementById('language-gateway');
-        if (gateway) gateway.style.display = 'none';
-        setLanguage(savedLang);
-        return;
-    }
-
-    try {
-        const response = await fetch('https://ipapi.co/json/');
-        const data = await response.json();
-        
-        if (localStorage.getItem('userSelectedLang')) return;
-
-        if (data.country_code === 'BR') {
-            selectLanguage('pt');
-        } else {
-            selectLanguage('en');
-        }
-    } catch (error) {
-        console.log("Detecção de IP indisponível. Mantendo a tela de seleção.");
+// Força a exibição da tela de seleção de idioma em todo novo acesso
+function detectUserCountryAndSetLanguage() {
+    localStorage.removeItem('userSelectedLang');
+    
+    const gateway = document.getElementById('language-gateway');
+    if (gateway) {
+        gateway.style.display = 'flex';
+        gateway.classList.remove('fade-out');
     }
 }
 
 function selectLanguage(lang) {
-    localStorage.setItem('userSelectedLang', lang);
+    // Removemos o salvamento no localStorage para que a tela reapareça sempre
     const gateway = document.getElementById('language-gateway');
     if (gateway) {
         gateway.classList.add('fade-out');
