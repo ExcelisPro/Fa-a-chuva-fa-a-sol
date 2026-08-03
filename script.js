@@ -116,7 +116,7 @@ const translations = {
         "sample-text-22": "They made room for one more without making a production of it. There was no formal announcement, no furniture rearranged with sighs. There was simply a child who needed a place, and people who had a place and were willing to share it. My cousins, three of them, the built-in companions of a childhood that might otherwise have been lonely, received me with the uncomplicated acceptance of children who have not yet learned to be suspicious of newcomers. I was there, I was one of them, and that was sufficient.",
         "sample-text-23": "Meals were eaten together. Mornings had their routines. There were arguments about small things and laughter about smaller ones. There was the ordinary texture of a family that works: the boredom and the comfort and the background hum of people who, whatever their individual frustrations, fundamentally wanted each other to be well.",
         "sample-text-24": "What that house gave me, without knowing it was giving anything at all, was something I would carry for the rest of my life: a definition. An internal answer, formed before I had words for it, to the question of what it actually looks like when a family works. Not the perfect family, not the conflict-free family, not the family from the magazine cover. The real family: with its noise and its hard mornings and its small injustices and, underneath all of it, the unshakeable understanding that every person inside those walls mattered and would be cared for. That definition was pressed into me before I could walk, and it stayed with me through everything that came after. Every time I was trying to build something, a company, a team, a marriage, it was always toward that definition that I was building, even when I did not know it.",
-        "sample-text-25": "For someone whose first year of life had coincided with the dissolution of his original family, that was not nothing. That was, in fact, everything. The baseline I would carry forward was being established in that house, by those people, in those ordinary daily rhythms that only reveal their importance much later, when you find yourself trying to build something similar from scratch.",
+        "sample-text-25": "For someone whose first year of life had coincided with the dissolutuion of his original family, that was not nothing. That was, in fact, everything. The baseline I would carry forward was being established in that house, by those people, in those ordinary daily rhythms that only reveal their importance much later, when you find yourself trying to build something similar from scratch.",
         "sample-text-26": "This matters. It matters more than it might seem to, in the early pages of a story that is going to visit some genuinely dark rooms. I was not unloved from the start. I was not unwanted from the start. I was taken in, held, and given a childhood that, for several years, would be more stable than many children in my position ever receive. The harder story would come. It always does. But it did not come first.",
         "sample-text-27": "My sister and I grew up without each other: two children from the same parents, born in the same city and brought into the same small house in Imbaú, separated before either of us could understand what separation meant. We would not share childhood memories, would not fight over the bathroom or walk to school together or develop the private language that siblings who grow up side by side always build. I grew up carrying the shape of her absence without knowing that is what it was. Children adapt to whatever their normal is. The loss is not felt as loss until much later, when comparison becomes possible, when the full picture of what might have been comes slowly into focus.",
         "sample-text-28": "For now, there was only what was.",
@@ -154,19 +154,20 @@ const SUPABASE_ANON_KEY = 'sb_publishable_q9W05l7cGPMikmenaOxPFA_WGRq-RwB';
 
 const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-// Força a exibição da tela de seleção de idioma em todo novo acesso
+// Remove qualquer automação por IP ou salvamento prévio para travar a tela visível
 function detectUserCountryAndSetLanguage() {
     localStorage.removeItem('userSelectedLang');
     
     const gateway = document.getElementById('language-gateway');
     if (gateway) {
         gateway.style.display = 'flex';
+        gateway.style.opacity = '1';
+        gateway.style.visibility = 'visible';
         gateway.classList.remove('fade-out');
     }
 }
 
 function selectLanguage(lang) {
-    // Removemos o salvamento no localStorage para que a tela reapareça sempre
     const gateway = document.getElementById('language-gateway');
     if (gateway) {
         gateway.classList.add('fade-out');
