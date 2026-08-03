@@ -1,9 +1,3 @@
-// --- CONFIGURAÇÃO DO SUPABASE ---
-const SUPABASE_URL = 'SUA_URL_DO_SUPABASE_AQUI';       // Ex: https://xyz.supabase.co
-const SUPABASE_ANON_KEY = 'SUA_CHAVE_ANON_PUBLIC_AQUI'; // Chave pública anônima
-
-const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-
 const translations = {
     pt: {
         "page-title": "Faça Chuva, Faça Sol | Eduardo Fernandes de Freitas",
@@ -172,7 +166,8 @@ const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 async function detectUserCountryAndSetLanguage() {
     if (localStorage.getItem('userSelectedLang')) {
         const savedLang = localStorage.getItem('userSelectedLang');
-        document.getElementById('language-gateway').style.display = 'none';
+        const gateway = document.getElementById('language-gateway');
+        if (gateway) gateway.style.display = 'none';
         setLanguage(savedLang);
         return;
     }
@@ -181,6 +176,8 @@ async function detectUserCountryAndSetLanguage() {
         const response = await fetch('https://ipapi.co/json/');
         const data = await response.json();
         
+        if (localStorage.getItem('userSelectedLang')) return;
+
         if (data.country_code === 'BR') {
             selectLanguage('pt');
         } else {
@@ -196,7 +193,9 @@ function selectLanguage(lang) {
     const gateway = document.getElementById('language-gateway');
     if (gateway) {
         gateway.classList.add('fade-out');
-        setTimeout(() => gateway.style.display = 'none', 600);
+        setTimeout(() => {
+            gateway.style.display = 'none';
+        }, 500);
     }
     setLanguage(lang);
 }
