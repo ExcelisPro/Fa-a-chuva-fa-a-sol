@@ -266,7 +266,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const ratingInput = document.querySelector('input[name="rating"]:checked');
             const comment = document.getElementById('reader-comment').value.trim();
 
-            if (!ratingInput) return;
+            if (!ratingInput) {
+                alert('Por favor, selecione uma avaliação em estrelas.');
+                return;
+            }
 
             const { error } = await supabaseClient
                 .from('book_reviews')
