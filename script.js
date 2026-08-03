@@ -136,14 +136,6 @@ const translations = {
         "bio-p6": "No Matter the Weather is his first book. It is the honest story of everything mentioned above, including the parts that never make it onto a resume. He lives in Brazil with his wife and daughter.",
         
         "contact-title": "GET IN TOUCH",
-        "reviews-title": "READER REVIEWS",
-        "reviews-subtitle": "Have you read the book? Leave your review below.",
-        "form-name": "Name (Optional)",
-        "form-country": "Country of Residence *",
-        "form-rating": "Rating *",
-        "form-comment": "Your Review / Comment *",
-        "form-submit": "SUBMIT REVIEW",
-        "form-success": "Thank you! Your review has been submitted successfully.",
         
         "feat1-title": "BORN IN THE STORM",
         "feat1-desc": "I found strength in cold days and new beginnings.",
@@ -156,9 +148,9 @@ const translations = {
     }
 };
 
-// --- CONFIGURAÇÃO DO SUPABASE ---
-const SUPABASE_URL = 'SUA_URL_DO_SUPABASE_AQUI';       // Substitua pela sua URL do Supabase
-const SUPABASE_ANON_KEY = 'SUA_CHAVE_ANON_PUBLIC_AQUI'; // Substitua pela sua chave anon/public
+// --- CONFIGURAÇÃO DO SUPABASE (COM AS SUAS CREDENCIAIS REAIS) ---
+const SUPABASE_URL = 'https://vwbjjtxwbqmypwlhfebb.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_q9W05l7cGPMikmenaOxPFA_WGRq-RwB';
 
 const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
