@@ -11,8 +11,34 @@ const translations = {
         "btn-buy": "COMPRAR NA AMAZON",
         "btn-sample": "Ler Amostra Grátis",
         "availability": "DISPONÍVEL NO KINDLE • ISBN: 979-8317943936",
-        "amazon-url": "https://www.amazon.com.br/Fa%C3%A7a-chuva-fa%C3%A7a-sol-reconstru%C3%A7%C3%A3o-ebook/dp/B0H9X47WZT",
+        "amazon-url": "https://www.amazon.com/Fa%C3%A7a-chuva-fa%C3%A7a-sol-reconstru%C3%A7%C3%A3o/dp/B0HBBNG1L9",
         
+        "nav-author": "Sobre o autor",
+        "nav-endorsements": "Depoimentos",
+        "nav-reviews": "Avalie",
+        "nav-contact": "Contato",
+
+        "target-title": "Para quem é este livro",
+        "target-item-1-title": "Para líderes e gestores",
+        "target-item-1-desc": "Uma perspectiva real e humana sobre como guiar equipes sob forte pressão, navegar por crises e reconstruir estruturas profissionais e pessoais.",
+        "target-item-2-title": "Para profissionais de projetos e engenharia",
+        "target-item-2-desc": "Lições práticas sobre planejamento, controle, resiliência no canteiro de obras e a aplicação de governança baseada em fluxo.",
+        "target-item-3-title": "Para quem busca recomeços",
+        "target-item-3-desc": "Uma narrativa profunda e honesta sobre perdas, a importância do alicerce familiar e a coragem inegociável de começar de novo.",
+
+        "endorsements-title": "DEPOIMENTOS",
+        "endorsement-1-text": "\"Sua metáfora contrastando 'projetos' temporários com 'operações' para a vida toda é incrivelmente poderosa. É um lembrete convincente de que a verdadeira liderança não consiste apenas em gerenciar projetos, mas também em ter a coragem de reconstruir após as tempestades da vida.\"",
+        "endorsement-1-author": "— Josue Bill Ngwaya",
+        "endorsement-1-country": "África do Sul",
+        
+        "endorsement-2-text": "\"Parabéns, Eduardo. Trazer uma história tão pessoal para o mundo exige coragem e um cuidado extraordinário. Li a amostra, e a escrita é belamente comedida, evocativa e profundamente humana. Desejo todo o sucesso a Faça Chuva, Faça Sol.\"",
+        "endorsement-2-author": "— Shari Vorster",
+        "endorsement-2-country": "África do Sul",
+
+        "endorsement-3-text": "\"Um livro que te prende do começo ao fim. História emocionante e contada com muita verdade. E no fim uma grande lição! Faça chuva, faça sol é o seu primeiro livro...\"",
+        "endorsement-3-author": "— Graziele",
+        "endorsement-3-country": "Brasil",
+
         "modal-chapter": "Capítulo 1",
         "sample-text-1": "Apucarana, 1991. Não uma cidade pequena: que fique claro desde o início. Uma cidade de verdade, pelos padrões do interior do Paraná: shopping, dois hospitais, uma universidade, uma rede sólida de escolas e um batalhão do Exército que dava ao lugar uma certa espinha dorsal, um senso de instituição e ordem que cidades menores só podiam imaginar. Ela ficava no norte do estado com a confiança tranquila de um lugar que havia se construído em algo real, sem precisar da permissão ou da atenção de ninguém para isso.",
         "sample-text-2": "Foi lá que nasci.",
@@ -30,7 +56,7 @@ const translations = {
         "sample-text-14": "Minha mãe era feita de material mais silencioso, mas não menos durável. Ela era o tipo de pessoa cuja presença numa casa não se anuncia, mas cuja ausência se tornaria imediatamente sentida em tudo: na qualidade das refeições, na ordem dos cômodos, no ritmo que mantinha as crianças ancoradas mesmo quando o restante da casa estava à deriva. Ela segurava as coisas unidas pela força pura e não reconhecida de sua consistência: garantindo que as crianças estivessem alimentadas, limpas e na cama num horário razoável, absorvendo a turbulência de um casamento difícil e ainda assim se levantando na manhã seguinte para fazer o que precisava ser feito.",
         "sample-text-15": "O que ela fazia não tinha nome, não era registrado, não era pago. Era simplesmente o trabalho de manter uma família funcionando, e ela o fazia com uma competência calma que eu só vim a apreciar completamente muito mais tarde, quando tentei, em circunstâncias completamente diferentes, fazer algo remotamente parecido.",
         "sample-text-16": "Quando cheguei ao mundo, ela já havia tomado uma decisão, mesmo que a papelada ainda não tivesse se atualizado. O casamento havia terminado. Ela sabia com a certeza particular das pessoas que passaram anos assistindo algo declinar e finalmente se permitiram nomear o que veem. Não era raiva que a havia levado até ali, ou não era só raiva. Era algo silencioso e mais absoluto: o reconhecimento de que a vida que estava vivendo não era a que continuaria vivendo. Ela ainda não sabia o que viria a seguir. Sabia apenas com o que havia terminado.",
-        "sample-text-17": "Eu tinha uma irmã, cinco anos, já moldada pela gravidade específica de um lar sob tensão. Ela havia vivido os anos em que o casamento dos nossos pais era suficientemente intacto para acreditar, e os anos em que não era, e havia desenvolvido os instintos finamente ajustados de uma criança que aprendeu que a atmosfera de uma casa pode mudar sem aviso. Ela não era infeliz. As crianças são mais resilientes do que os adultos tendem a reconhecer, e ela tinha sua mãe, e tinha as pequenas certezas da sua rotina diária. Mas não era intocada. Nenhuma criança nessa situação é intocada.",
+        "sample-text-17": "Eu tinha uma irmã, cinco anos, já moldada pela gravidade específica de um lar sob tensão. Ela havia vivido os anos em que o casamento dos nossos pais era suficientemente intacto para acreditar, e os anos em que não era, e havia desenvolvido os instintos finamente ajustados de uma criança que aprendeu que a atmosfera de uma casa pode mudar sem aviso. Ela não era infeliz. As crianças são mais resilientes do que os adultos tendem a reconhecer, e ela tinha suas mãe, e tinha as pequenas certezas da sua rotina diária. Mas não era intocada. Nenhuma criança nessa situação é intocada.",
         "sample-text-18": "Quando cheguei, ela me olhou do jeito que só uma criança pode olhar para algo novo, com a atenção plena e descomplicada de uma pessoa para quem o mundo ainda tem capacidade de surpreender. Ela não sabia que eu iria embora antes de ter chance de me conhecer. Só sabia que eu estava ali.",
         "sample-text-19": "Fui embora antes de ter memória do que deixei.",
         "sample-text-20": "O divórcio, quando veio, chegou com a rapidez humana que caracteriza o momento em que pessoas que estavam segurando algo juntas finalmente param. O que havia sido uma família de quatro tornou-se, no espaço de decisões que ninguém documentou e ninguém depois explicou completamente, quatro pessoas apontadas em quatro direções diferentes.",
@@ -42,7 +68,7 @@ const translations = {
         "sample-text-26": "O que aquela casa me deu, sem saber que estava dando, foi algo que eu levaria pelo resto da vida: uma definição. Uma resposta interna, formada antes que eu tivesse palavras para ela, para a pergunta como é quando uma família funciona de verdade. Não a família perfeita, não a família sem conflito, não a família das capas de revista. A família real: com seu barulho e suas manhãs difíceis e suas pequenas injustiças e, por baixo de tudo isso, o compromisso inabalável de que cada pessoa dentro daquelas paredes importava e seria cuidada. Essa definição, impressa em mim antes que eu pudesse andar, me acompanhou por tudo que veio depois. Em todos os momentos em que eu estava tentando construir algo, uma empresa, uma equipe, um casamento, era sempre em direção a essa definição que eu estava construindo, mesmo sem saber.",
         "sample-text-27": "Para alguém cujo primeiro ano de vida havia coincidido com a dissolução da família original, isso não era pouca coisa. Era, de fato, tudo. A linha de base que eu carregava adiante estava sendo estabelecida naquela casa, por aquelas pessoas, naqueles ritmos diários corriqueiros que só revelam sua importância muito mais tarde, quando você se encontra tentando construir algo semelhante do zero.",
         "sample-text-28": "Isso importa. Importa mais do que pode parecer, nas primeiras páginas de uma história que visitará alguns quartos genuinamente escuros. Não fui indesejado desde o início. Fui acolhido, sustentado e recebido uma infância que, por vários anos, seria mais estável do que muitas crianças na minha posição jamais receberam. A história mais difícil viria. Sempre vem. Mas não veio primeiro.",
-        "sample-text-29": "Minha irmã e eu crescemos sem um ao outro: duas crianças dos mesmos pais, nascidas na mesma cidade e levadas para a mesma casa pequena em Imbaú, separadas antes que qualquer um de nós pudesse entender o que a separação significava. Não compartilhamos memórias de infância, não brigamos pelo banheiro nem caminhamos juntos para a escola nem desenvolvemos a linguagem secreta que irmãos que crescem juntos inevitavelmente constroem. Cresci com a forma da ausência dela sem saber que era isso. As crianças se adaptam ao que quer que seja o seu normal. A perda não é sentida como perda até muito mais tarde, quando a comparação se torna possível, quando o quadro completo do que poderia ter sido vem lentamente ao foco.",
+        "sample-text-29": "Minha irmã e eu crescemos sem um ao outro: duas crianças dos mesmos pais, nascidas na mesma cidade e levadas para a mesma casa pequena em Imbaú, separadas antes que qualquer um de nós pudesse entender o que a separação significava. Não compartilhamos memórias de infância, não brigamos pelo banheiro nem caminhamos juntos para a escola nem desenvolvemos a linguagem secreta que irmãos que crescessem juntos inevitavelmente constroem. Cresci com a forma da ausência dela sem saber que era isso. As crianças se adaptam ao que quer que seja o seu normal. A perda não é sentida como perda até muito mais tarde, quando a comparação se torna possível, quando o quadro completo do que poderia ter sido vem lentamente ao foco.",
         "sample-text-30": "Por ora, havia apenas o que era.",
         "sample-text-31": "Uma casa pequena em Imbaú, adquirida por duas pessoas que não ficariam juntas tempo suficiente para quitá-la. Um clima ameno do Paraná, nem cruel nem generoso. Um pai que vendia passagens para os destinos de outras pessoas e sonhava, quietamente, com soldados. Uma mãe que segurava tudo junto e já havia decidido, sem contar a ninguém, que não seguraria essa coisa específica para sempre.",
         "sample-text-32": "E eu, sem idade para entender o que estava acontecendo, passado gentilmente para os braços de pessoas que fariam o certo por mim.",
@@ -89,8 +115,34 @@ const translations = {
         "btn-buy": "BUY ON AMAZON",
         "btn-sample": "Read Free Sample",
         "availability": "AVAILABLE ON KINDLE • ISBN: 979-8188799823", 
-        "amazon-url": "https://www.amazon.com/dp/B0HBB9Z3JT",
+        "amazon-url": "https://www.amazon.com/No-matter-Weather-reconstruction-leadership/dp/B0HBBNYWQ2",
         
+        "nav-author": "About the author",
+        "nav-endorsements": "Endorsements",
+        "nav-reviews": "Review",
+        "nav-contact": "Contact",
+
+        "target-title": "Who this book is for",
+        "target-item-1-title": "For leaders and managers",
+        "target-item-1-desc": "A raw perspective on leading teams under intense pressure, navigating crises, and rebuilding both professional and personal structures.",
+        "target-item-2-title": "For project and engineering professionals",
+        "target-item-2-desc": "Practical insights on planning, control, jobsite resilience, and flow-based governance.",
+        "target-item-3-title": "For those seeking new beginnings",
+        "target-item-3-desc": "A deeply human and honest narrative about loss, family grounding, and the undeniable courage to start over.",
+
+        "endorsements-title": "ENDORSEMENTS",
+        "endorsement-1-text": "\"Your metaphor contrasting temporary 'projects' with lifelong 'operations' is incredibly powerful. It's a compelling reminder that true leadership is not only about managing projects, but also about having the courage to rebuild after life's storms.\"",
+        "endorsement-1-author": "— Josue Bill Ngwaya",
+        "endorsement-1-country": "South Africa",
+        
+        "endorsement-2-text": "\"Congratulations, Eduardo. Bringing a story this personal into the world takes both courage and extraordinary care. I've read the sample, and the writing is beautifully restrained, evocative and deeply human. Wishing No Matter the Weather every success.\"",
+        "endorsement-2-author": "— Shari Vorster",
+        "endorsement-2-country": "South Africa",
+
+        "endorsement-3-text": "\"A book that grips you from start to finish. An emotional story told with great truth. And a great lesson at the end! No Matter the Weather is just the beginning!!!\"",
+        "endorsement-3-author": "— Graziele",
+        "endorsement-3-country": "Brazil",
+
         "modal-chapter": "Chapter 1",
         "sample-text-1": "Apucarana, 1991. Not a small town, and let that be clear from the start. A real city, by the standards of interior Paraná: a shopping mall, two hospitals, a university, a solid network of schools, and an Army battalion that gave the place a backbone, a sense of institution and order that smaller towns could only dream about. It sat in the north of the state with the quiet confidence of a place that had made something of itself, without asking anyone's permission or waiting for anyone's attention to do it.",
         "sample-text-2": "That is where I was born.",
@@ -116,7 +168,7 @@ const translations = {
         "sample-text-22": "They made room for one more without making a production of it. There was no formal announcement, no furniture rearranged with sighs. There was simply a child who needed a place, and people who had a place and were willing to share it. My cousins, three of them, the built-in companions of a childhood that might otherwise have been lonely, received me with the uncomplicated acceptance of children who have not yet learned to be suspicious of newcomers. I was there, I was one of them, and that was sufficient.",
         "sample-text-23": "Meals were eaten together. Mornings had their routines. There were arguments about small things and laughter about smaller ones. There was the ordinary texture of a family that works: the boredom and the comfort and the background hum of people who, whatever their individual frustrations, fundamentally wanted each other to be well.",
         "sample-text-24": "What that house gave me, without knowing it was giving anything at all, was something I would carry for the rest of my life: a definition. An internal answer, formed before I had words for it, to the question of what it actually looks like when a family works. Not the perfect family, not the conflict-free family, not the family from the magazine cover. The real family: with its noise and its hard mornings and its small injustices and, underneath all of it, the unshakeable understanding that every person inside those walls mattered and would be cared for. That definition was pressed into me before I could walk, and it stayed with me through everything that came after. Every time I was trying to build something, a company, a team, a marriage, it was always toward that definition that I was building, even when I did not know it.",
-        "sample-text-25": "For someone whose first year of life had coincided with the dissolutuion of his original family, that was not nothing. That was, in fact, everything. The baseline I would carry forward was being established in that house, by those people, in those ordinary daily rhythms that only reveal their importance much later, when you find yourself trying to build something similar from scratch.",
+        "sample-text-25": "For someone whose first year of life had coincided with the dissolution of his original family, that was not nothing. That was, in fact, everything. The baseline I would carry forward was being established in that house, by those people, in those ordinary daily rhythms that only reveal their importance much later, when you find yourself trying to build something similar from scratch.",
         "sample-text-26": "This matters. It matters more than it might seem to, in the early pages of a story that is going to visit some genuinely dark rooms. I was not unloved from the start. I was not unwanted from the start. I was taken in, held, and given a childhood that, for several years, would be more stable than many children in my position ever receive. The harder story would come. It always does. But it did not come first.",
         "sample-text-27": "My sister and I grew up without each other: two children from the same parents, born in the same city and brought into the same small house in Imbaú, separated before either of us could understand what separation meant. We would not share childhood memories, would not fight over the bathroom or walk to school together or develop the private language that siblings who grow up side by side always build. I grew up carrying the shape of her absence without knowing that is what it was. Children adapt to whatever their normal is. The loss is not felt as loss until much later, when comparison becomes possible, when the full picture of what might have been comes slowly into focus.",
         "sample-text-28": "For now, there was only what was.",
@@ -148,24 +200,10 @@ const translations = {
     }
 };
 
-// --- CONFIGURAÇÃO DO SUPABASE ---
-const SUPABASE_URL = 'https://vwbjjtxwbqmypwlhfebb.supabase.co';
-const SUPABASE_ANON_KEY = 'sb_publishable_q9W05l7cGPMikmenaOxPFA_WGRq-RwB';
+const SUPABASE_URL = 'https://idetmbzmzyyinzncekep.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_aNhAtl6K9e_2cronea9Wow_2S0j5mG6';
 
 const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-
-// Remove qualquer automação por IP ou salvamento prévio para travar a tela visível
-function detectUserCountryAndSetLanguage() {
-    localStorage.removeItem('userSelectedLang');
-    
-    const gateway = document.getElementById('language-gateway');
-    if (gateway) {
-        gateway.style.display = 'flex';
-        gateway.style.opacity = '1';
-        gateway.style.visibility = 'visible';
-        gateway.classList.remove('fade-out');
-    }
-}
 
 function selectLanguage(lang) {
     const gateway = document.getElementById('language-gateway');
@@ -237,11 +275,7 @@ window.onclick = function(event) {
     }
 }
 
-// Inicialização unificada ao carregar a página
 document.addEventListener('DOMContentLoaded', () => {
-    detectUserCountryAndSetLanguage();
-
-    // Lógica de envio do formulário de avaliações para o Supabase
     const form = document.getElementById('review-form');
     if (form) {
         form.addEventListener('submit', async (e) => {
@@ -258,7 +292,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const { error } = await supabaseClient
-                .from('book_reviews')
+                .from('book_reviews_tests')
                 .insert([
                     { 
                         name: name || 'Anonymous', 
