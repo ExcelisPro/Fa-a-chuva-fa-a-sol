@@ -6,13 +6,23 @@
     <meta name="description" content="Official website of the book No Matter the Weather, by Eduardo Fernandes de Freitas.">
     <title data-i18n="page-title">No Matter the Weather | Eduardo Fernandes de Freitas</title>
     
-    <!-- OPEN GRAPH / LINKEDIN / SOCIAL SHARING META TAGS -->
-    <meta property="og:title" content="No Matter the Weather | Eduardo Fernandes de Freitas">
-    <meta property="og:description" content="A story of rebuilding, family, and leadership. Discover the memoirs and insights on project management and resilience.">
-    <meta property="og:image" content="https://facachuvafacasol.vercel.app/assets/cover-en.jpg">
-    <meta property="og:url" content="https://facachuvafacasol.vercel.app/">
+    <!-- OPEN GRAPH / WHATSAPP / LINKEDIN / SOCIAL SHARING META TAGS -->
+    <meta property="og:title" content="No Matter the Weather | Faça Chuva, Faça Sol">
+    <meta property="og:description" content="A story of rebuilding, family, and leadership. Discover the memoirs and insights on project management, resilience, and new beginnings by Eduardo Fernandes de Freitas.">
+    <meta property="og:image" content="https://landing-page-tests-navy.vercel.app/assets/cover-en.jpg">
+    <meta property="og:image:secure_url" content="https://landing-page-tests-navy.vercel.app/assets/cover-en.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://landing-page-tests-navy.vercel.app/">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="No Matter the Weather">
+
+    <!-- TWITTER / X CARD META TAGS -->
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="No Matter the Weather | Faça Chuva, Faça Sol">
+    <meta name="twitter:description" content="A story of rebuilding, family, and leadership. Memoirs and insights on project management and resilience by Eduardo Fernandes de Freitas.">
+    <meta name="twitter:image" content="https://landing-page-tests-navy.vercel.app/assets/cover-en.jpg">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,23 +65,30 @@
         </div>
     </div>
 
-    <!-- NAVEGAÇÃO BILINGUE FIXA -->
-    <nav class="lang-switcher">
-        <button onclick="setLanguage('en')" class="active">
-            <img src="https://flagcdn.com/us.svg" class="flag-icon" alt="US Flag"> English
-        </button>
-        <span class="divider">|</span>
-        <button onclick="setLanguage('pt')">
-            <img src="https://flagcdn.com/br.svg" class="flag-icon" alt="BR Flag"> Português
-        </button>
-    </nav>
-
-    <!-- TOPO NAVY -->
+    <!-- TOPO NAVY FIXO -->
     <header class="top-bar">
-        <h4 data-i18n="top-header">MEMOIRS</h4>
-        <svg class="ornament" viewBox="0 0 100 20" fill="var(--color-gold)">
-            <path d="M50 10 L45 5 L40 10 L45 15 Z M20 10 L40 10 M60 10 L80 10 M50 10 L55 5 L60 10 L55 15 Z"></path>
-        </svg>
+        <div class="top-bar-container">
+            <h4 data-i18n="top-header">MEMOIRS</h4>
+            
+            <!-- MENU DE NAVEGAÇÃO RÁPIDA -->
+            <nav class="top-nav-links">
+                <a href="#author-section" data-i18n="nav-author">Sobre o autor</a>
+                <a href="#endorsements-section" data-i18n="nav-endorsements">Depoimentos</a>
+                <a href="#reviews-section" data-i18n="nav-reviews">Avalie</a>
+                <a href="#contact-section" data-i18n="nav-contact">Contato</a>
+            </nav>
+
+            <!-- NAVEGAÇÃO BILINGUE FIXA NO TOPO -->
+            <div class="lang-switcher">
+                <button onclick="setLanguage('en')" class="active">
+                    <img src="https://flagcdn.com/us.svg" class="flag-icon" alt="US Flag"> English
+                </button>
+                <span class="divider">|</span>
+                <button onclick="setLanguage('pt')">
+                    <img src="https://flagcdn.com/br.svg" class="flag-icon" alt="BR Flag"> Português
+                </button>
+            </div>
+        </div>
     </header>
 
     <!-- CONTEÚDO PRINCIPAL (CREAM) -->
@@ -85,7 +102,7 @@
                 </div>
             </div>
 
-            <!-- COLUNA 2: SOBRE O LIVRO & CTA -->
+            <!-- COLUNA 2: SOBRE O LIVRO, PARA QUEM É & CTA -->
             <div class="column-book-info">
                 <h3 class="pre-title" data-i18n="pre-title">MEMOIRS</h3>
                 <h1 class="main-title" data-i18n="title">No Matter<br>the Weather</h1>
@@ -99,6 +116,37 @@
                 <div class="book-description">
                     <p data-i18n="desc-p1">No Matter the Weather was born from a desire to revisit the past, examine successes and failures, and transform them into learned lessons.</p>
                     <p data-i18n="desc-p2">It spans over thirty years of a history marked by challenges, where the courage to start over was found in the simplicity of a life dedicated to project management and family balance. Deep down, it is a book about the kind of leadership one only learns after losing everything and rebuilding.</p>
+                </div>
+
+                <!-- SEÇÃO: PARA QUEM É ESTE LIVRO -->
+                <div class="target-audience-section">
+                    <h3 data-i18n="target-title">Para quem é este livro</h3>
+                    
+                    <div class="target-items-grid">
+                        <div class="target-item">
+                            <div class="target-icon-bullet"></div>
+                            <div>
+                                <h4 data-i18n="target-item-1-title">Para líderes e gestores</h4>
+                                <p data-i18n="target-item-1-desc">Uma perspectiva real e humana sobre como guiar equipes sob forte pressão, navegar por crises e reconstruir estruturas profissionais e pessoais.</p>
+                            </div>
+                        </div>
+
+                        <div class="target-item">
+                            <div class="target-icon-bullet"></div>
+                            <div>
+                                <h4 data-i18n="target-item-2-title">Para profissionais de projetos e engenharia</h4>
+                                <p data-i18n="target-item-2-desc">Lições práticas sobre planejamento, controle, resiliência no canteiro de obras e a aplicação de governança baseada em fluxo.</p>
+                            </div>
+                        </div>
+
+                        <div class="target-item">
+                            <div class="target-icon-bullet"></div>
+                            <div>
+                                <h4 data-i18n="target-item-3-title">Para quem busca recomeços</h4>
+                                <p data-i18n="target-item-3-desc">Uma narrativa profunda e honesta sobre perdas, a importância do alicerce familiar e a coragem inegociável de começar de novo.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="author-signature">
@@ -125,8 +173,8 @@
                 </div>
             </div>
 
-            <!-- COLUNA 3: SOBRE O AUTOR -->
-            <div class="column-author">
+            <!-- COLUNA 3: SOBRE O AUTOR, CONTATO E AVALIAÇÕES -->
+            <div id="author-section" class="column-author">
                 <div class="author-header">
                     <svg viewBox="0 0 24 24" fill="var(--color-gold)"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
                     <h3 data-i18n="author-title">ABOUT THE AUTHOR</h3>
@@ -143,7 +191,7 @@
                     <p data-i18n="bio-p6">No Matter the Weather is his first book. It is the honest story of everything mentioned above, including the parts that never make it onto a resume. He lives in Brazil with his wife and daughter.</p>
                     
                     <!-- BLOCO DE CONTATO COM LINKEDIN -->
-                    <div class="author-contact">
+                    <div id="contact-section" class="author-contact">
                         <h4 data-i18n="contact-title">GET IN TOUCH</h4>
                         <a href="mailto:edengcv@gmail.com" class="contact-link">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
@@ -160,7 +208,7 @@
                     </div>
 
                     <!-- SEÇÃO DE AVALIAÇÕES E COMENTÁRIOS (SUPABASE) -->
-                    <section class="reviews-section">
+                    <section id="reviews-section" class="reviews-section">
                         <div class="reviews-header">
                             <svg viewBox="0 0 24 24" fill="var(--color-gold)"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                             <h3 data-i18n="reviews-title">READER REVIEWS</h3>
@@ -203,6 +251,45 @@
                         </form>
                     </section>
 
+                </div>
+            </div>
+
+            <!-- SEÇÃO DE DEPOIMENTOS UNIFICADA COM OS 3 CARDS -->
+            <div id="endorsements-section" class="endorsements-section">
+                <h3 data-i18n="endorsements-title">ENDORSEMENTS</h3>
+                <div class="endorsements-grid-inner">
+                    <!-- Depoimento 1: Josue Bill Ngwaya -->
+                    <div class="endorsement-card">
+                        <p class="endorsement-quote" data-i18n="endorsement-1-text">
+                            "Your metaphor contrasting temporary 'projects' with lifelong 'operations' is incredibly powerful. It's a compelling reminder that true leadership is not only about managing projects, but also about having the courage to rebuild after life's storms."
+                        </p>
+                        <p class="endorsement-author">
+                            <span data-i18n="endorsement-1-author">— Josue Bill Ngwaya</span>, 
+                            <span class="endorsement-country" data-i18n="endorsement-1-country">South Africa</span>
+                        </p>
+                    </div>
+
+                    <!-- Depoimento 2: Shari Vorster -->
+                    <div class="endorsement-card">
+                        <p class="endorsement-quote" data-i18n="endorsement-2-text">
+                            "Congratulations, Eduardo. Bringing a story this personal into the world takes both courage and extraordinary care. I've read the sample, and the writing is beautifully restrained, evocative and deeply human. Wishing No Matter the Weather every success."
+                        </p>
+                        <p class="endorsement-author">
+                            <span data-i18n="endorsement-2-author">— Shari Vorster</span>, 
+                            <span class="endorsement-country" data-i18n="endorsement-2-country">South Africa</span>
+                        </p>
+                    </div>
+
+                    <!-- Depoimento 3: Graziele -->
+                    <div class="endorsement-card">
+                        <p class="endorsement-quote" data-i18n="endorsement-3-text">
+                            "Um livro que te prende do começo ao fim. História emocionante e contada com muita verdade. E no fim uma grande lição! Faça chuva, faça sol é o seu primeiro livro..."
+                        </p>
+                        <p class="endorsement-author">
+                            <span data-i18n="endorsement-3-author">— Graziele</span>, 
+                            <span class="endorsement-country" data-i18n="endorsement-3-country">Brazil</span>
+                        </p>
+                    </div>
                 </div>
             </div>
 
